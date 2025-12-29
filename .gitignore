@@ -1,8 +1,19 @@
-tt.*
-.tests
-doc/tags
-debug
-.repro
-foo.*
+# Neovim state / cache
+.cache/
+shada/
+state/
+undo/
+swap/
+backup/
+view/
+
+# LazyVim / Lazy.nvim
+lazy-lock.json
+.plugin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
 *.log
-data
