@@ -5,7 +5,7 @@
 ### Linux/MacOS
 - Clone the starter
 ```bash
-git clone https://github.com/Depaiiva/Configuration-Lazyvim.git
+git clone https://github.com/Depaiiva/Configuration-Lazyvim.git .config/nvim
 ```
 
 - Remove the .git folder, so you can add it to your own repo later
@@ -44,5 +44,5 @@ The settings are in
 %LOCALAPPDATA%\nvim
 ```
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+ 💤 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
