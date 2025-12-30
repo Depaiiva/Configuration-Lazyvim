@@ -5,7 +5,7 @@
 ### Linux/MacOS
 - Clone the starter
 ```bash
-git clone https://github.com/Depaiiva/Configuration-Lazyvim.git .config/nvim
+git clone https://github.com/Depaiiva/Configuration-Lazyvim.git ~/.config/nvim
 ```
 
 - Remove the .git folder, so you can add it to your own repo later
