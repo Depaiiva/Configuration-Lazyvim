@@ -24,21 +24,23 @@ The settings are in
 ```
 
 ### Windows
-- Clone the starter
+#### Clone the starter
+- PowerShell
 ```bash
 git clone https://github.com/Depaiiva/Configuration-Lazyvim $env:LOCALAPPDATA\nvim
 ```
-
-- Remove the .git folder, so you can add it to your own repo later
+- CMD
 ```bash
-Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+git clone https://github.com/Depaiiva/Configuration-Lazyvim "%LOCALAPPDATA%\nvim"
 ```
-
-- Start NeoVim!
+- Git Bash
+```bash
+git clone https://github.com/Depaiiva/Configuration-Lazyvim.git /c/Users/$USERNAME/AppData/Local/nvim
+```
+- start NeoVim!
 ```bash
 nvim
 ```
-
 The settings are in
 ```bash
 %LOCALAPPDATA%\nvim
