@@ -18,3 +18,6 @@ vim.api.nvim_create_autocmd("User", {
     vim.opt.listchars = {}
   end,
 })
+
+vim.opt.relativenumber = false
+vim.opt.number = true
