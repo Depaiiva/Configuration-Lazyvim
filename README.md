@@ -26,7 +26,7 @@ The settings are in
 ### Windows
 - Clone the starter
 ```bash
-git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
+git clone https://github.com/Depaiiva/Configuration-Lazyvim $env:LOCALAPPDATA\nvim
 ```
 
 - Remove the .git folder, so you can add it to your own repo later
