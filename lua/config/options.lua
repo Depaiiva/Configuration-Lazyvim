@@ -19,7 +19,5 @@ vim.api.nvim_create_autocmd("User", {
   end,
 })
 
-vim.cmd([[ set guicursor= ]])
-
 vim.opt.relativenumber = false
 vim.opt.number = true
