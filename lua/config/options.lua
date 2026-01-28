@@ -21,3 +21,5 @@ vim.api.nvim_create_autocmd("User", {
 
 vim.opt.relativenumber = false
 vim.opt.number = true
+
+vim.g.snacks_words = false

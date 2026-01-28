@@ -34,3 +34,40 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.cmd("setlocal nolist")
   end,
 })
+
+-- Statusline minimalista apenas para Java
+local default_progress = vim.lsp.handlers["$/progress"]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    -- Esconde progresso do jdtls
+    vim.lsp.handlers["$/progress"] = function(err, result, ctx, config)
+      if ctx.client_id then
+        local client = vim.lsp.get_client_by_id(ctx.client_id)
+        if client and client.name == "jdtls" then
+          return
+        end
+      end
+      return default_progress(err, result, ctx, config)
+    end
+
+    -- Statusline minimalista para Java
+    vim.opt_local.statusline = table.concat({
+      " %f", -- arquivo
+      "%m", -- modificado
+      "%=", -- separador
+      "%{luaeval('vim.bo.filetype')}",
+      "  %l:%c ", -- linha:coluna
+    })
+  end,
+})
+
+-- Restaura comportamento normal ao sair de Java
+vim.api.nvim_create_autocmd("BufLeave", {
+  pattern = "*.java",
+  callback = function()
+    vim.lsp.handlers["$/progress"] = default_progress
+    vim.opt_local.statusline = ""
+  end,
+})
